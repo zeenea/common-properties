@@ -21,16 +21,7 @@ tasks.test {
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
-    maven("https://maven.pkg.github.com/zeenea/common-properties") {
-        credentials {
-            username =
-                    System.getenv("GITHUB_ACTOR") ?: project.findProperty("github.actor") as String?
-            password =
-                    System.getenv("GITHUB_TOKEN") ?: project.findProperty("github.token") as String?
-        }
-    }
 }
 
 dependencies {
@@ -52,5 +43,24 @@ spotless {
     java {
         googleJavaFormat()
         toggleOffOn()
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/zeenea/common-properties")
+            credentials {
+                username =
+                        System.getenv("GITHUB_ACTOR") ?: project.findProperty("github.actor") as String?
+                password =
+                        System.getenv("GITHUB_TOKEN") ?: project.findProperty("github.token") as String?
+            }
+        }
+    }
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
+        }
     }
 }
