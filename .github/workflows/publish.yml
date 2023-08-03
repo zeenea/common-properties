@@ -29,12 +29,12 @@ jobs:
         env:
           LIB_VERSION: ${{ steps.get_version.outputs.LIB_VERSION }}
 
-      - name: Setup Gradle
+      - name: Publish library
         uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          arguments: build -x test
 
       - uses: ncipollo/release-action@v1
         with:
