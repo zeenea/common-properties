@@ -27,7 +27,7 @@ jobs:
           LIB_VERSION=$(<version)
           echo "LIB_VERSION=${LIB_VERSION}" >> $GITHUB_OUTPUT
         env:
-          LIB_VERSION: ${{ steps.get_lib_version.outputs.LIB_VERSION }}
+          LIB_VERSION: ${{ steps.get_version.outputs.LIB_VERSION }}
 
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
@@ -38,6 +38,6 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          tag: ${{ steps.get_lib_version.outputs.LIB_VERSION }}
+          tag: ${{ steps.get_version.outputs.LIB_VERSION }}
           generateReleaseNotes: true
           commit: ${{ github.sha }}
