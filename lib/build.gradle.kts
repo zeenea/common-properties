@@ -60,6 +60,7 @@ publishing {
     }
     publications {
         register<MavenPublication>("gpr") {
+            artifactId = "common-properties"
             from(components["java"])
         }
     }
