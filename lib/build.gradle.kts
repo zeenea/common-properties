@@ -10,16 +10,9 @@ version = rootProject.file("version").readLines()[0]
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(11))
     }
 }
-tasks.withType<JavaCompile> {
-    options.compilerArgs.add("--enable-preview")
-}
-tasks.test {
-    jvmArgs("--enable-preview")
-}
-
 repositories {
     mavenCentral()
 }
