@@ -12,12 +12,19 @@ public final class CommonProperty {
   @Nullable private final String defaultDescription;
   private final Type type;
 
+  private final Boolean isPropagable;
+
   public CommonProperty(
-      UUID uuid, String defaultName, @Nullable String defaultDescription, Type type) {
+      UUID uuid,
+      String defaultName,
+      @Nullable String defaultDescription,
+      Type type,
+      Boolean isPropagable) {
     this.uuid = uuid;
     this.defaultName = defaultName;
     this.defaultDescription = defaultDescription;
     this.type = type;
+    this.isPropagable = isPropagable;
   }
 
   public UUID uuid() {
@@ -41,6 +48,10 @@ public final class CommonProperty {
     return type;
   }
 
+  public Boolean getIsPropagable() {
+    return isPropagable;
+  }
+
   @Override
   public boolean equals(Object obj) {
     if (obj == this) return true;
@@ -49,12 +60,13 @@ public final class CommonProperty {
     return Objects.equals(this.uuid, that.uuid)
         && Objects.equals(this.defaultName, that.defaultName)
         && Objects.equals(this.defaultDescription, that.defaultDescription)
-        && Objects.equals(this.type, that.type);
+        && Objects.equals(this.type, that.type)
+        && Objects.equals(this.isPropagable, that.isPropagable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uuid, defaultName, defaultDescription, type);
+    return Objects.hash(uuid, defaultName, defaultDescription, type, isPropagable);
   }
 
   @Override
@@ -71,6 +83,9 @@ public final class CommonProperty {
         + ", "
         + "type="
         + type
+        + ", "
+        + "isPropagable="
+        + isPropagable
         + ']';
   }
 }
