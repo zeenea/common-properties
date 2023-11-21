@@ -36,7 +36,28 @@ public class CommonProperties {
           Type.TAG,
           false);
 
+  public static final CommonProperty sqlQueryProperty =
+      new CommonProperty(
+          UUID.fromString("18c61716-e110-40c1-8ca2-3a1468842a4a"),
+          "SQL Query",
+          "SQL Queries executed by the process",
+          Type.LONG_TEXT,
+          false);
+
+  public static final CommonProperty sqlQueryDialectProperty =
+      new CommonProperty(
+          UUID.fromString("b94ab627-9b06-4866-b304-47028baf5608"),
+          "SQL Query dialect",
+          "Dialect of SQL Queries executed by the process",
+          Type.TAG,
+          false);
+
   public static final Set<CommonProperty> commonProperties =
       Set.of(
-          catalogCommonProperty, databaseCommonProperty, schemaCommonProperty, typeCommonProperty);
+          catalogCommonProperty,
+          databaseCommonProperty,
+          schemaCommonProperty,
+          typeCommonProperty,
+          sqlQueryProperty,
+          sqlQueryDialectProperty);
 }
