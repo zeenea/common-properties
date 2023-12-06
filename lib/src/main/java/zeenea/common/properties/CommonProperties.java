@@ -52,6 +52,14 @@ public class CommonProperties {
           Type.TAG,
           false);
 
+  public static final CommonProperty sqlQueryDefaultNamespaceProperty =
+      new CommonProperty(
+          UUID.fromString("ca4aeec1-d2da-42e7-9a90-b7f59cbc05e9"),
+          "SQL Query default namespace",
+          "Default search namespace of SQL Queries executed by the process",
+          Type.TAG,
+          false);
+
   public static final Set<CommonProperty> commonProperties =
       Set.of(
           catalogCommonProperty,
@@ -59,5 +67,6 @@ public class CommonProperties {
           schemaCommonProperty,
           typeCommonProperty,
           sqlQueryProperty,
-          sqlQueryDialectProperty);
+          sqlQueryDialectProperty,
+          sqlQueryDefaultNamespaceProperty);
 }
