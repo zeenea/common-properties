@@ -52,8 +52,17 @@ public class CommonProperties {
           Type.TAG,
           false);
 
+  public static final CommonProperty accessUrlProperty =
+      new CommonProperty(
+          UUID.fromString("094599ed-3f25-4695-9270-91f02b1f7304"),
+          "Access URL",
+          "Common Property Access URL",
+          Type.URL,
+          false);
+
   public static final Set<CommonProperty> commonProperties =
       Set.of(
+          accessUrlProperty,
           catalogCommonProperty,
           databaseCommonProperty,
           schemaCommonProperty,
