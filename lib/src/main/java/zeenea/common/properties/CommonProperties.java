@@ -54,7 +54,7 @@ public class CommonProperties {
 
   public static final CommonProperty accessUrlProperty =
       new CommonProperty(
-          UUID.fromString("094599ed-3f25-4695-9270-91f02b1f7304"),
+          UUID.fromString("08bfb9ee-b161-11ee-9cf6-1f4507e5336f"),
           "Access URL",
           "Common Property Access URL",
           Type.URL,
