@@ -60,6 +60,22 @@ public class CommonProperties {
           Type.URL,
           false);
 
+  public static final CommonProperty expressionProperty =
+      new CommonProperty(
+          UUID.fromString("2188c4bc-fdc5-43a6-a895-89afd9d28f81"),
+          "Expression",
+          "Field expression",
+          Type.LONG_TEXT,
+          false);
+
+  public static final CommonProperty powerQueryProperty =
+      new CommonProperty(
+          UUID.fromString("8691460c-a2b8-4f59-970f-fd3f026a6071"),
+          "Power Query",
+          "Power Query",
+          Type.LONG_TEXT,
+          false);
+
   public static final Set<CommonProperty> commonProperties =
       Set.of(
           accessUrlProperty,
@@ -68,5 +84,7 @@ public class CommonProperties {
           schemaCommonProperty,
           typeCommonProperty,
           sqlQueryProperty,
-          sqlQueryDialectProperty);
+          sqlQueryDialectProperty,
+          expressionProperty,
+          powerQueryProperty);
 }
