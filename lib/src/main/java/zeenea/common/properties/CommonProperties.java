@@ -62,7 +62,7 @@ public class CommonProperties {
 
   public static final CommonProperty expressionProperty =
       new CommonProperty(
-          UUID.fromString("2188c4bc-fdc5-43a6-a895-89afd9d28f81"),
+          UUID.fromString("f2ae218d-4c07-319e-8b5c-dab35088fba5"),
           "Expression",
           "Field expression",
           Type.LONG_TEXT,
@@ -70,7 +70,7 @@ public class CommonProperties {
 
   public static final CommonProperty powerQueryProperty =
       new CommonProperty(
-          UUID.fromString("8691460c-a2b8-4f59-970f-fd3f026a6071"),
+          UUID.fromString("d3e0e9bb-b046-3619-939f-00e977a4c1af"),
           "Power Query",
           "Power Query",
           Type.LONG_TEXT,
