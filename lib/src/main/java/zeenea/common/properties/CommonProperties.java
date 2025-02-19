@@ -20,6 +20,7 @@ public class CommonProperties {
           "Common Property Database",
           Type.TAG,
           true);
+
   public static final CommonProperty schemaCommonProperty =
       new CommonProperty(
           UUID.fromString("7055eb42-329e-11ee-a1c1-af9eec72241a"),
@@ -76,6 +77,14 @@ public class CommonProperties {
           Type.LONG_TEXT,
           false);
 
+  public static final CommonProperty dataSourceTypeProperty =
+      new CommonProperty(
+          UUID.fromString("68d7f77d-06c2-4772-91cc-877f7eb8bc08"),
+          "Datasource Type",
+          "Common Property Datasource Type",
+          Type.TAG,
+          false);
+
   public static final Set<CommonProperty> commonProperties =
       Set.of(
           accessUrlProperty,
@@ -86,5 +95,6 @@ public class CommonProperties {
           sqlQueryProperty,
           sqlQueryDialectProperty,
           expressionProperty,
-          powerQueryProperty);
+          powerQueryProperty,
+          dataSourceTypeProperty);
 }
