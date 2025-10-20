@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "zeenea"
-version = rootProject.file("version").readLines()[0]
+version = System.getenv("VERSION") ?: "dev"
 
 java {
     toolchain {

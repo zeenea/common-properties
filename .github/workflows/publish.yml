@@ -1,43 +1,30 @@
-name: Publish Common Properties Library
+name: publish
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  release:
+    types: [ published ]
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   publish-zeenea-common-properties:
-
+    if: ${{ !github.event.release.draft }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
+      - uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Get version
-        id: get_version
-        run: |
-          LIB_VERSION=$(<version)
-          echo "LIB_VERSION=${LIB_VERSION}" >> $GITHUB_OUTPUT
-        env:
-          LIB_VERSION: ${{ steps.get_version.outputs.LIB_VERSION }}
+      - uses: gradle/actions/setup-gradle@v5
 
-      - name: Publish library
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build publish
+      - name: Build and Publish with Gradle
+        run: ./gradlew publish
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.get_version.outputs.LIB_VERSION }}
-          generateReleaseNotes: true
-          commit: ${{ github.sha }}
+          VERSION: ${{ github.event.release.tag_name }}
