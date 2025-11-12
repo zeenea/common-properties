@@ -4,7 +4,7 @@ import static zeenea.common.properties.datasource.DataSourceIdentifierKeys.*;
 
 import java.util.Set;
 
-public enum DataSourceIdentifier {
+public enum DataSourceType {
   CUSTOM {
     @Override
     public Set<DataSourceIdentifierKey> getMatchingKeys() {
