@@ -15,7 +15,7 @@ You're not supposed to use it directly, it's only useful for the public SDK whic
 In order to reference this package locally from other repositories (like [public-connector-sdk][public-connector-sdk]), one can run:
 
 ```shell
-./gradelw publishToMavenLocal
+./gradlew publishToMavenLocal
 ```
 
 [public-connector-sdk]: https://github.com/zeenea/public-connector-sdk
