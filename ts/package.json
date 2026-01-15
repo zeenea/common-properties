@@ -1,0 +1,24 @@
+{
+  "name": "@zeenea/common-properties",
+  "version": "1.0.0",
+  "description": "Common properties for Zeenea",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeenea/common-properties.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "typescript": "~5.3.3"
+  }
+}
