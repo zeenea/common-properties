@@ -1,0 +1,21 @@
+import { DataSourceIdentifierKey } from './types';
+
+export const SCHEMA: DataSourceIdentifierKey = { key: "schema" };
+export const STAGING_DIRECTORY: DataSourceIdentifierKey = { key: "stagingDir" };
+export const CATALOG: DataSourceIdentifierKey = { key: "catalog" };
+export const REGION_NAME: DataSourceIdentifierKey = { key: "regionName" };
+export const LOCATION: DataSourceIdentifierKey = { key: "location" };
+export const FORMAT: DataSourceIdentifierKey = { key: "format" };
+export const DELIMITER: DataSourceIdentifierKey = { key: "delimiter" };
+export const PROJECT: DataSourceIdentifierKey = { key: "project" };
+export const DATASET: DataSourceIdentifierKey = { key: "dataset" };
+export const HOST: DataSourceIdentifierKey = { key: "host" };
+export const PORT: DataSourceIdentifierKey = { key: "port" };
+export const DATABASE: DataSourceIdentifierKey = { key: "database" };
+export const ACCOUNT: DataSourceIdentifierKey = { key: "account" };
+export const PATH: DataSourceIdentifierKey = { key: "path" };
+export const SERVICE_NAME: DataSourceIdentifierKey = { key: "serviceName" };
+export const REGION: DataSourceIdentifierKey = { key: "region" };
+export const ENDPOINT_URL: DataSourceIdentifierKey = { key: "endpointUrl" };
+export const WAREHOUSE: DataSourceIdentifierKey = { key: "warehouse" };
+export const BUCKET: DataSourceIdentifierKey = { key: "bucket" };

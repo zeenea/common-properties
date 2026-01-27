@@ -47,3 +47,35 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: ${{ github.event.release.tag_name }}
+
+  publish-zeenea-common-properties-ts:
+    needs: build-and-test
+    if: ${{ !github.event.release.draft }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+          cache: 'yarn'
+          cache-dependency-path: 'ts/yarn.lock'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        working-directory: ts
+
+      - name: Build
+        run: yarn build
+        working-directory: ts
+
+      - name: Update package version
+        run: npm version ${{ github.event.release.tag_name }} --no-git-tag-version --allow-same-version
+        working-directory: ts
+
+      - name: Publish
+        run: npm publish
+        working-directory: ts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
