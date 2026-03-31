@@ -15,6 +15,7 @@ public enum DataSources {
   BIGQUERY,
   DATABRICKS,
   DB2,
+  DBT,
   DENODO,
   GENERIC_JDBC,
   GLUE,

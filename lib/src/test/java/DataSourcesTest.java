@@ -1,12 +1,69 @@
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 import zeenea.common.properties.datasource.DataSources;
 import zeenea.common.properties.datasource.reference.SourceReference;
 
 class DataSourcesTest {
+
+  @Test
+  void enumSizeDoesNotChange() {
+    // Verify all expected enum names exist
+    Set<String> expectedNames =
+        Set.of(
+            "ATHENA",
+            "AZURE",
+            "BIGQUERY",
+            "CUSTOM",
+            "DATABRICKS",
+            "DB2",
+            "DBT",
+            "DENODO",
+            "GENERIC_JDBC",
+            "GLUE",
+            "INFORMIX",
+            "KAFKA",
+            "LOCAL",
+            "MSFABRIC",
+            "MYSQL",
+            "ORACLE",
+            "PALANTIR_FOUNDRY",
+            "POSTGRESQL",
+            "REDSHIFT",
+            "S3",
+            "SNOWFLAKE",
+            "SQLSERVER");
+
+    Set<String> actualNames =
+        Set.of(
+            java.util.Arrays.stream(DataSources.values()).map(Enum::name).toArray(String[]::new));
+
+    assertThat(actualNames)
+        .as("DataSources enum names should not be renamed or removed")
+        .containsExactlyInAnyOrder(expectedNames.toArray(new String[0]));
+
+    // Verify each enum value has a corresponding test method
+    Set<String> testMethodNames =
+        Arrays.stream(DataSourcesTest.class.getDeclaredMethods())
+            .filter(m -> m.isAnnotationPresent(Test.class))
+            .map(Method::getName)
+            .collect(Collectors.toSet());
+
+    for (DataSources dataSource : DataSources.values()) {
+      String expectedMethodName = dataSource.name().toLowerCase();
+      assertThat(testMethodNames)
+          .as(
+              "Test method '%s' should exist for enum value %s",
+              expectedMethodName, dataSource.name())
+          .contains(expectedMethodName);
+    }
+  }
 
   @Test
   void athena() {
@@ -55,15 +112,17 @@ class DataSourcesTest {
     assertThat(ref.getDatasource().getValues().get("type")).isEqualTo("databricks");
     assertThat(ref.getConnectorIds())
         .isEqualTo(
-            List.of("databricks-hivemetastore", "databricks-unitycatalog", "databricks-jdbc"));
+            List.of(
+                // "databricks-hivemetastore",
+                "databricks-unitycatalog", "databricks-jdbc"));
     assertThat(ref.getDatasource().getKeys()).isEqualTo(List.of("type", "host"));
     assertThat(ref.getDatasets().size()).isEqualTo(1);
-    assertThat(ref.getDatasets().get(0).getName()).isEqualTo("Catalog Element");
+    assertThat(ref.getDatasets().get(0).getName()).isEqualTo("Catalog Item");
     assertThat(ref.getDatasets().get(0).getIdentification().getKeys())
         .isEqualTo(List.of("catalog", "schema", "table"));
     assertThat(ref.getDatasets().get(0).getFields()).isEqualTo(List.of("field_id"));
     assertThat(ref.getDataProcesses().size()).isEqualTo(1);
-    assertThat(ref.getDataProcesses().get(0).getName()).isEqualTo("Job Element");
+    assertThat(ref.getDataProcesses().get(0).getName()).isEqualTo("Job");
     assertThat(ref.getDataProcesses().get(0).getIdentification().getKeys())
         .isEqualTo(List.of("job_id"));
   }
@@ -78,6 +137,15 @@ class DataSourcesTest {
     assertThat(ref.getDatasets().get(0).getName()).isEqualTo("Table");
     assertThat(ref.getDatasets().get(0).getIdentification().getKeys())
         .isEqualTo(List.of("database", "schema", "table"));
+  }
+
+  @Test
+  void dbt() {
+    SourceReference ref = DataSources.DBT.getSourceReference();
+    assertThat(ref.getDatasource().getValues().get("type")).isEqualTo("dbt");
+    assertThat(ref.getConnectorIds()).isEqualTo(List.of("dbt-cloud", "dbt"));
+    assertThat(ref.getDatasource().getKeys()).isEqualTo(List.of("type"));
+    assertThat(ref.getDatasets().size()).isEqualTo(0);
   }
 
   @Test

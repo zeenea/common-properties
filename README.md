@@ -10,6 +10,12 @@ It lists also how to identify uniquely a DataSource inside Zeenea Datacatalog.
 
 You're not supposed to use it directly, it's only useful for the public SDK which internally uses it.
 
+### Keep calm and...
+
+```shell
+./gradlew :lib:spotlessApply
+```
+
 ### Local publication
 
 In order to reference this package locally from other repositories (like [public-connector-sdk][public-connector-sdk]), one can run:
@@ -17,5 +23,7 @@ In order to reference this package locally from other repositories (like [public
 ```shell
 ./gradlew publishToMavenLocal
 ```
+
+
 
 [public-connector-sdk]: https://github.com/zeenea/public-connector-sdk

@@ -1,0 +1,10 @@
+connectorIds:
+  - dbt-cloud
+  - dbt
+datasource:
+  keys:
+    - type
+  values:
+    type: dbt
+dataProcesses: []
+datasets: []

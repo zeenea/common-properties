@@ -1,5 +1,5 @@
 connectorIds:
-  - databricks-hivemetastore
+#  - databricks-hivemetastore possibly deprecated
   - databricks-unitycatalog
   - databricks-jdbc
 datasource:
@@ -9,7 +9,7 @@ datasource:
   values:
     type: databricks
 datasets:
-  - name: Catalog Element
+  - name: Catalog Item
     identification:
       keys:
         - catalog
@@ -18,7 +18,7 @@ datasets:
     fields:
       - field_id
 dataProcesses:
-  - name: Job Element
+  - name: Job
     identification:
       keys:
         - job_id
