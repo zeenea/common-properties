@@ -1,0 +1,11 @@
+connectorIds:
+  - AWSRedshift
+datasource:
+  keys:
+    - database
+    - schema
+    - host
+    - region
+    - account
+  values:
+    type: redshift

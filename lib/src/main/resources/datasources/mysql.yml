@@ -1,0 +1,16 @@
+connectorIds:
+  - Mysql
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: mysql
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

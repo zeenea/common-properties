@@ -1,0 +1,12 @@
+connectorIds:
+  - azure-datafactory
+  - azure-synapse-data
+  - azure-purview
+datasource:
+  keys:
+    - type
+    - location
+    - format
+    - delimiter
+  values:
+    type: azure

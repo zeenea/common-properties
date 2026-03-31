@@ -1,0 +1,16 @@
+connectorIds:
+  - Oracle
+datasource:
+  keys:
+    - host
+    - port
+    - serviceName
+  values:
+    type: oracle
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

@@ -1,0 +1,16 @@
+connectorIds:
+  - SQLServer
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: sqlserver
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

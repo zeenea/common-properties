@@ -1,0 +1,15 @@
+connectorIds:
+  - BigQuery
+  - BigQueryOrganization
+datasource:
+  keys:
+    - type
+  values:
+    type: bigquery
+datasets:
+  - name: Dataset
+    identification:
+      keys:
+        - project
+        - dataset
+        - table

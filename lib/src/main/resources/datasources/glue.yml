@@ -1,0 +1,12 @@
+connectorIds:
+  - aws.glue
+  - aws-glue-etl
+datasource:
+  keys:
+    - type
+    - account
+    - database
+    - location
+    - format
+  values:
+    type: glue

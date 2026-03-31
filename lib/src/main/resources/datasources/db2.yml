@@ -1,0 +1,16 @@
+connectorIds:
+  - DB2
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: db2
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

@@ -1,0 +1,16 @@
+connectorIds:
+  - PgSql
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: postgres
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

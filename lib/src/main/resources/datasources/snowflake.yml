@@ -1,0 +1,17 @@
+connectorIds:
+  - snowflake-v2
+datasource:
+  keys:
+    - type
+    - host
+    - port
+    - account
+  values:
+    type: snowflake
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

@@ -1,0 +1,24 @@
+connectorIds:
+  - databricks-hivemetastore
+  - databricks-unitycatalog
+  - databricks-jdbc
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: databricks
+datasets:
+  - name: Catalog Element
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table
+    fields:
+      - field_id
+dataProcesses:
+  - name: Job Element
+    identification:
+      keys:
+        - job_id
