@@ -6,5 +6,8 @@ datasource:
     - type
   values:
     type: dbt
-dataProcesses: []
+dataProcesses:
+  keys:
+    - project
+    - unique_id
 datasets: []
