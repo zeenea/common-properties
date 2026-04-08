@@ -7,9 +7,9 @@ datasource:
   values:
     type: dbt
 dataProcesses:
-  name: job
-  identification:
-    keys:
-      - project
-      - unique_id
+  - name: job
+    identification:
+      keys:
+        - project
+        - unique_id
 datasets: []

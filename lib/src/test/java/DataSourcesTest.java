@@ -146,6 +146,10 @@ class DataSourcesTest {
     assertThat(ref.getConnectorIds()).isEqualTo(List.of("dbt-cloud", "dbt"));
     assertThat(ref.getDatasource().getKeys()).isEqualTo(List.of("type"));
     assertThat(ref.getDatasets().size()).isEqualTo(0);
+    assertThat(ref.getDataProcesses().size()).isEqualTo(1);
+    assertThat(ref.getDataProcesses().get(0).getName()).isEqualTo("job");
+    assertThat(ref.getDataProcesses().get(0).getIdentification().getKeys())
+        .isEqualTo(List.of("project", "unique_id"));
   }
 
   @Test
