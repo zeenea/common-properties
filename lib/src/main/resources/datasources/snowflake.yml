@@ -3,8 +3,6 @@ connectorIds:
 datasource:
   keys:
     - type
-    - host
-    - port
     - account
   values:
     type: snowflake
@@ -12,6 +10,6 @@ datasets:
   - name: Table
     identification:
       keys:
-        - database
+        - catalog
         - schema
         - table
