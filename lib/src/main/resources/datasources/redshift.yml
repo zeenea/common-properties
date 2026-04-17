@@ -2,10 +2,15 @@ connectorIds:
   - AWSRedshift
 datasource:
   keys:
-    - database
-    - schema
+    - type
     - host
-    - region
-    - account
+    - port
   values:
     type: redshift
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - database
+        - schema
+        - table

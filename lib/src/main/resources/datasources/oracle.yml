@@ -2,9 +2,9 @@ connectorIds:
   - Oracle
 datasource:
   keys:
+    - type
     - host
     - port
-    - serviceName
   values:
     type: oracle
 datasets:
