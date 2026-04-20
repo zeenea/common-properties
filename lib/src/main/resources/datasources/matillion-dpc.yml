@@ -3,14 +3,11 @@ connectorIds:
 datasource:
   keys:
     - type
-    # - host
-    # - port
   values:
     type: matillion-dpc
 dataProcesses:
   - name: dpcJob
     identification:
       keys:
-        - path
+        - path # /!\ can occur several times if the path has been split /!\
         - file_name
-datasets: []

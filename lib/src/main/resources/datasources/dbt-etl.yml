@@ -1,11 +1,10 @@
 connectorIds:
-  - dbt-cloud
   - dbt
 datasource:
   keys:
     - type
   values:
-    type: dbt
+    type: dbt-etl
 dataProcesses:
   - name: job
     identification:

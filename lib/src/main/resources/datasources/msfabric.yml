@@ -7,7 +7,6 @@ datasource:
   values:
     type: msfabric
 
-dataProcesses: []
 visualizations:
   - name: Report
     identification:
@@ -23,7 +22,7 @@ visualizations:
         - type
         - name
       values:
-        type: reports
+        type: report
 
 datasets:
   - name: Semantic Model

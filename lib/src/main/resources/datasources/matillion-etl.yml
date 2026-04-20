@@ -3,10 +3,10 @@ connectorIds:
 datasource:
   keys:
     - type
-    # - host
-    # - port
+    - host
+    - port
   values:
-    type: matillion
+    type: matillion-etl
 dataProcesses:
   - name: job
     identification:
@@ -14,4 +14,3 @@ dataProcesses:
         - group
         - project
         - job
-datasets: []

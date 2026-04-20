@@ -1,0 +1,15 @@
+connectorIds:
+  - dbt-cloud
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: dbt-cloud
+dataProcesses:
+  - name: node
+    identification:
+      keys:
+        - type
+        - package
+        - name

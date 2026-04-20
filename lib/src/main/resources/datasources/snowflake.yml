@@ -3,7 +3,7 @@ connectorIds:
 datasource:
   keys:
     - type
-    - account
+    - account_id
   values:
     type: snowflake
 datasets:
