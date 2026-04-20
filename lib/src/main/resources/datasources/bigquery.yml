@@ -1,6 +1,5 @@
 connectorIds:
-  - BigQuery
-  - BigQueryOrganization
+  - bigquery-v2
 datasource:
   keys:
     - type

@@ -11,6 +11,6 @@ datasets:
   - name: Table
     identification:
       keys:
-        - database
+        - catalog
         - schema
         - table

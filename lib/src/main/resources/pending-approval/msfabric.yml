@@ -62,7 +62,7 @@ datasets:
         - warehouse
         - name
       values:
-        type: warehouses
+        type: warehouse
     fields:
       - field_key
 
@@ -82,6 +82,6 @@ datasets:
         - lakehouse
         - name
       values:
-        type: lakehouses
+        type: lakehouse
     fields:
       - field_key
