@@ -1,0 +1,17 @@
+connectorIds:
+  - matillion
+datasource:
+  keys:
+    - type
+    # - host
+    # - port
+  values:
+    type: matillion
+dataProcesses:
+  - name: job
+    identification:
+      keys:
+        - group
+        - project
+        - job
+datasets: []

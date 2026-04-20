@@ -1,0 +1,16 @@
+connectorIds:
+  - matillion-dpc
+datasource:
+  keys:
+    - type
+    # - host
+    # - port
+  values:
+    type: matillion-dpc
+dataProcesses:
+  - name: dpcJob
+    identification:
+      keys:
+        - path
+        - file_name
+datasets: []
