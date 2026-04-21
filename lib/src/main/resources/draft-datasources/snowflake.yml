@@ -1,0 +1,29 @@
+connectorIds:
+  - snowflake-v2
+datasource:
+  keys:
+    - type
+    - account_id
+  values:
+    type: snowflake
+
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table
+
+dataProcesses:
+  - name: PipeLineage
+    identification:
+      keys:
+        - pipe_marker
+        - catalog
+        - pipe
+  - name: HistoryLineage
+    identification:
+      keys:
+        - queryType
+        - hash
