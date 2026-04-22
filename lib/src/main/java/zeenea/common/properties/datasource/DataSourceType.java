@@ -4,7 +4,6 @@ import static zeenea.common.properties.datasource.DataSourceIdentifierKeys.*;
 
 import java.util.Set;
 
-
 public enum DataSourceType {
   CUSTOM {
     @Override
