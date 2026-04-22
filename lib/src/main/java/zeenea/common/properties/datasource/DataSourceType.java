@@ -4,10 +4,7 @@ import static zeenea.common.properties.datasource.DataSourceIdentifierKeys.*;
 
 import java.util.Set;
 
-/**
- * the single source of truth are the yaml files in resources/datasources
- */
-@Deprecated(since = "4.9", forRemoval = true)
+
 public enum DataSourceType {
   CUSTOM {
     @Override
