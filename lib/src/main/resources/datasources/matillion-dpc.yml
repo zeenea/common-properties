@@ -9,5 +9,5 @@ dataProcesses:
   - name: dpcJob
     identification:
       keys:
-        - path # /!\ can occur several times if the path has been split /!\
+        - path* # /!\ can occur several times if the path has been split /!\
         - file_name
