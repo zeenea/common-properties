@@ -1,0 +1,13 @@
+connectorIds:
+  - matillion-dpc
+datasource:
+  keys:
+    - type
+  values:
+    type: matillion-dpc
+dataProcesses:
+  - name: dpcJob
+    identification:
+      keys:
+        - path* # /!\ can occur several times if the path has been split /!\
+        - file_name

@@ -1,0 +1,17 @@
+connectorIds:
+  - Oracle
+datasource:
+  keys:
+    - type
+    - host
+    - port
+    # service_name is not relevant for us, the customer might dig host and port anyway
+  values:
+    type: oracle
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table

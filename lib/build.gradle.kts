@@ -21,8 +21,8 @@ dependencies {
     // Use JUnit test framework.
     val junitVersion = "5.10.2"
     testImplementation(platform("org.junit:junit-bom:${junitVersion}"))
-    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter-api")
-    testRuntimeOnly(group = "org.junit.jupiter", name = "junit-jupiter-engine")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api("org.apache.commons:commons-math3:3.6.1")

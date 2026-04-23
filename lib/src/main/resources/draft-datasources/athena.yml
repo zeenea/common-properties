@@ -1,0 +1,11 @@
+connectorIds:
+  - aws-athena
+datasource:
+  keys:
+    - type
+    - schema
+    - stagingDir
+    - catalog
+    - regionName
+  values:
+    type: athena

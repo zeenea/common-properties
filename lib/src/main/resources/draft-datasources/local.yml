@@ -1,0 +1,9 @@
+connectorIds:
+  - local-filesystem
+datasource:
+  keys:
+    - type
+    - path
+    - format
+  values:
+    type: local

@@ -1,0 +1,13 @@
+connectorIds:
+  - dbt
+datasource:
+  keys:
+    - type
+  values:
+    type: dbt-etl
+dataProcesses:
+  - name: job
+    identification:
+      keys:
+        - project
+        - unique_id

@@ -1,0 +1,86 @@
+connectorIds:
+  - msfabric
+  - powerbi-v2
+datasource:
+  keys:
+    - type
+  values:
+    type: msfabric
+
+visualizations:
+  - name: Report
+    identification:
+      keys:
+        - workspace_id
+        - type
+        - id
+      values:
+        type: report
+    label:
+      keys:
+        - workspace_name
+        - type
+        - name
+      values:
+        type: report
+
+datasets:
+  - name: Semantic Model
+    identification:
+      keys:
+        - workspace_id
+        - type
+        - id
+        - dataset_name
+      values:
+        type: dataset
+    label:
+      keys:
+        - workspace_name
+        - type
+        - semantic_model_name
+        - name
+      values:
+        type: datasets
+    fields:
+      - field_key
+
+  - name: Warehouse
+    identification:
+      keys:
+      - workspace_id
+      - type
+      - id
+      - table_name
+      values:
+        type: warehouse
+    label:
+      keys:
+        - workspace_name
+        - type
+        - warehouse
+        - name
+      values:
+        type: warehouse
+    fields:
+      - field_key
+
+  - name: Lakehouse
+    identification:
+      keys:
+        - workspace_id
+        - type
+        - id
+        - table_name
+      values:
+        type: lakehouse
+    label:
+      keys:
+        - workspace_name
+        - type
+        - lakehouse
+        - name
+      values:
+        type: lakehouse
+    fields:
+      - field_key

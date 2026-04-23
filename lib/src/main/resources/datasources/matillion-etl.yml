@@ -1,0 +1,16 @@
+connectorIds:
+  - matillion
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: matillion-etl
+dataProcesses:
+  - name: job
+    identification:
+      keys:
+        - group
+        - project
+        - job

@@ -1,0 +1,17 @@
+connectorIds:
+  - DB2
+datasource:
+  keys:
+    - type
+    - host
+    - port
+    # SID is not relevant for us, the customer might dig host and port anyway
+  values:
+    type: db2
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table

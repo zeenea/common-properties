@@ -1,0 +1,9 @@
+connectorIds:
+  - kafka
+datasource:
+  keys:
+    - type
+    - host
+    - format
+  values:
+    type: kafka

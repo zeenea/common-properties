@@ -1,0 +1,16 @@
+connectorIds:
+  - generic-jdbc
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: jdbc
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table

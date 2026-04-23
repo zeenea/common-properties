@@ -1,0 +1,10 @@
+connectorIds:
+  - denodo
+datasource:
+  keys:
+    - type
+    - host
+    - port
+    - database
+  values:
+    type: denodo

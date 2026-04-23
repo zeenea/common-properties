@@ -1,0 +1,16 @@
+connectorIds:
+  - AWSRedshift
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: redshift
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table

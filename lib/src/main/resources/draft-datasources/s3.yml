@@ -1,0 +1,7 @@
+connectorIds:
+  - AmazonS3
+datasource:
+  keys:
+    - bucket
+  values:
+    type: s3
