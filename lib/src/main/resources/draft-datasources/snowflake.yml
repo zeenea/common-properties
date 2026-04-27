@@ -20,6 +20,7 @@ dataProcesses:
     identification:
       keys:
         - pipe_marker
+        - schema
         - catalog
         - pipe
   - name: HistoryLineage
