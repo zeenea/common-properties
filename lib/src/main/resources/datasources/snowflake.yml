@@ -31,5 +31,5 @@ dataProcesses:
   - name: HistoryLineage
     identification:
       keys:
-        - queryType
+        - query_type
         - hash
