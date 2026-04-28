@@ -15,14 +15,16 @@ datasets:
         - catalog
         - schema
         - table
+    fields:
+      - name
 
 dataProcesses:
   - name: PipeLineage
     identification:
       keys:
         - pipe_marker
-        - schema
         - catalog
+        - schema
         - pipe
   - name: HistoryLineage
     identification:
