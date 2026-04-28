@@ -26,8 +26,8 @@ dataProcesses:
         - catalog
         - schema
         - pipe
-    values:
-      pipe_marker: pipe
+      values:
+        pipe_marker: pipe
   - name: HistoryLineage
     identification:
       keys:
