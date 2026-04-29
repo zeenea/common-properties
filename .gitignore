@@ -36,3 +36,5 @@ Thumbs.db
 
 # IntelliJ IDEA
 .idea/
+
+.claude/
