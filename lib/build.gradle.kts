@@ -33,7 +33,7 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation("com.google.guava:guava:32.1.3-jre")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.21.2")
-    implementation("com.jayway.jsonpath:json-path:2.9.0")
+    implementation("com.jayway.jsonpath:json-path:2.10.0")
 }
 
 tasks.jar {
