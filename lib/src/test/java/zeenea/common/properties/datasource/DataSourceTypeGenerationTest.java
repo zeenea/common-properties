@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 class DataSourceTypeGenerationTest {
 
-  private static final String DATA_SOURCE_TYPE_APPROVED ="approval/DataSourceType.approved.java";
+  private static final String DATA_SOURCE_TYPE_APPROVED = "approval/DataSourceType.approved.java";
   private static final String DATA_SOURCE_TYPE_RECEIVED = "approval/DataSourceType.received.java";
 
   @Test
@@ -22,22 +22,27 @@ class DataSourceTypeGenerationTest {
         Paths.get("build/generated/datasource-type")
             .resolve("zeenea/common/properties/datasource/DataSourceType.java");
 
-    String received = Files.readString(generatedFile, StandardCharsets.UTF_8);
-    String approved = readApproved();
+    String receivedContent = Files.readString(generatedFile, StandardCharsets.UTF_8);
+    String approvedContent = readApproved();
 
-    if (!received.equals(approved)) {
+    if (!receivedContent.equals(approvedContent)) {
 
-      Files.writeString(received(), received, StandardCharsets.UTF_8);
+      Path receivedPath = receivedPath();
+      Files.writeString(receivedPath, receivedContent, StandardCharsets.UTF_8);
       fail(
           "Generated DataSourceType.java does not match approved snapshot.\n"
               + "Received file written to: %s\n"
               + "To approve, run: cp %s %s",
-          DATA_SOURCE_TYPE_RECEIVED, DATA_SOURCE_TYPE_RECEIVED, DATA_SOURCE_TYPE_RECEIVED);
+          receivedPath, receivedPath, approvedPath());
     }
   }
 
-  private Path received() {
+  private Path receivedPath() {
     return Paths.get("src/test/resources").resolve(DATA_SOURCE_TYPE_RECEIVED);
+  }
+
+  private Path approvedPath() {
+    return Paths.get("src/test/resources").resolve(DATA_SOURCE_TYPE_APPROVED);
   }
 
   private static String readApproved() throws IOException {
