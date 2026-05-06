@@ -1,0 +1,16 @@
+version: 2
+
+registries:
+
+updates:
+  # Enable version updates for daily
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Enable version updates for GitHub Actions weekly
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
