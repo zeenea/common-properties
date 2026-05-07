@@ -2,7 +2,7 @@ plugins {
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
     `maven-publish`
-    id("com.diffplug.spotless") version "6.20.0"
+    id("com.diffplug.spotless") version "7.2.1"
     id("zeenea.generate-datasource-type")
 }
 
