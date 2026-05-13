@@ -1,5 +1,3 @@
-connectorIds:
-  - Mysql
 datasource:
   keys:
     - type

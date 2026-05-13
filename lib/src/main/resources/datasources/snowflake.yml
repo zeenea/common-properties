@@ -1,6 +1,3 @@
-connectorIds:
-  - snowflake-v2
-
 datasource:
   keys:
     - type

@@ -1,5 +1,3 @@
-connectorIds:
-  - Oracle
 datasource:
   keys:
     - type

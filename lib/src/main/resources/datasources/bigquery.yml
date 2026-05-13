@@ -1,5 +1,3 @@
-connectorIds:
-  - bigquery-v2
 datasource:
   keys:
     - type

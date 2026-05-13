@@ -1,5 +1,3 @@
-connectorIds:
-  - DB2
 datasource:
   keys:
     - type

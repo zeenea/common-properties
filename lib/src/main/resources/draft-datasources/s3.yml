@@ -1,5 +1,3 @@
-connectorIds:
-  - AmazonS3
 datasource:
   keys:
     - bucket

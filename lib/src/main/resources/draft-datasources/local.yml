@@ -1,5 +1,3 @@
-connectorIds:
-  - local-filesystem
 datasource:
   keys:
     - type

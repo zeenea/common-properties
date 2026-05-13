@@ -1,5 +1,3 @@
-connectorIds:
-  - generic-jdbc
 datasource:
   keys:
     - type

@@ -1,5 +1,3 @@
-connectorIds:
-  - SQLServer
 datasource:
   keys:
     - type

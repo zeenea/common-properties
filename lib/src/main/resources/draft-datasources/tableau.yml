@@ -1,6 +1,3 @@
-connectorIds:
-  - tableau-v2
-
 datasource:
   keys:
     - type

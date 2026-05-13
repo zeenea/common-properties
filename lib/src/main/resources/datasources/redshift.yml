@@ -1,5 +1,3 @@
-connectorIds:
-  - AWSRedshift
 datasource:
   keys:
     - type

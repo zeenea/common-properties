@@ -1,5 +1,3 @@
-connectorIds:
-  - aws-athena
 datasource:
   keys:
     - type

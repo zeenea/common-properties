@@ -1,7 +1,3 @@
-connectorIds:
-#  - databricks-hivemetastore possibly deprecated
-  - databricks-unitycatalog
-  - databricks-jdbc
 datasource:
   keys:
     - type
