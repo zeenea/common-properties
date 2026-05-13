@@ -1,5 +1,3 @@
-connectorIds:
-  - palantir
 datasource:
   keys:
     - type

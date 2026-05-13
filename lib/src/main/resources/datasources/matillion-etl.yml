@@ -1,5 +1,3 @@
-connectorIds:
-  - matillion
 datasource:
   keys:
     - type

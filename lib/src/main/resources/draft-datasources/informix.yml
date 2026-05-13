@@ -1,5 +1,3 @@
-connectorIds:
-  - actian-informix
 datasource:
   keys:
     - type

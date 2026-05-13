@@ -1,5 +1,3 @@
-connectorIds:
-  - bigquery-v2
 datasource:
   keys:
     - type
@@ -12,3 +10,5 @@ datasets:
         - project
         - dataset
         - table
+    fields:
+      - field_key
