@@ -12,3 +12,5 @@ datasets:
         - project
         - dataset
         - table
+    fields:
+      - field_key

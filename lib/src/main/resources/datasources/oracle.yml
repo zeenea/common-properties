@@ -15,3 +15,5 @@ datasets:
         - catalog
         - schema
         - table
+    fields:
+      - field_key
