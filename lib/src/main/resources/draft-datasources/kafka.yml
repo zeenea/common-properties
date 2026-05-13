@@ -1,5 +1,3 @@
-connectorIds:
-  - kafka
 datasource:
   keys:
     - type

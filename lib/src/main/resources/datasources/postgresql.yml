@@ -1,5 +1,3 @@
-connectorIds:
-  - PgSql
 datasource:
   keys:
     - type
@@ -14,3 +12,5 @@ datasets:
         - catalog
         - schema
         - table
+    fields:
+      - field_key

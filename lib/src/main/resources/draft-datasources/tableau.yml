@@ -1,0 +1,43 @@
+datasource:
+  keys:
+    - type
+    - host
+    - site
+  values:
+    type: tableau
+
+visualizations:
+  - name: Workbook
+    identification:
+      keys:
+        - id
+        - datasource_type
+      values:
+        datasource_type: workbook
+    label:
+      keys:
+        - type
+        - project_name
+        - name
+      values:
+        type: workbook
+    fields:
+      - field_key
+
+datasets:
+  - name: Published Datasource
+    identification:
+      keys:
+        - id
+        - datasource_type
+      values:
+        datasource_type: publisheddatasource
+    label:
+      keys:
+        - type
+        - project_name
+        - name
+      values:
+        type: publisheddatasource
+    fields:
+      - field_key
