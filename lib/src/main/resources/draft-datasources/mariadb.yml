@@ -1,0 +1,16 @@
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: mariadb
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - catalog
+        - schema
+        - table
+    fields:
+      - field_key
