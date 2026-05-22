@@ -5,14 +5,15 @@ datasource:
   values:
     type: databricks
 datasets:
-  - name: Catalog Item
+  - name: Table
     identification:
       keys:
         - catalog
         - schema
         - table
     fields:
-      - field_id
+      # on parquet/csv files, there can be a column name AND a position (for deduplication)
+      - field_key*
 dataProcesses:
   - name: Job
     identification:
