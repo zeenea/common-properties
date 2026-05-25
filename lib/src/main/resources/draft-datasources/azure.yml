@@ -1,7 +1,3 @@
-connectorIds:
-  - azure-datafactory
-  - azure-synapse-data
-  - azure-purview
 datasource:
   keys:
     - type

@@ -1,5 +1,3 @@
-connectorIds:
-  - dbt
 datasource:
   keys:
     - type

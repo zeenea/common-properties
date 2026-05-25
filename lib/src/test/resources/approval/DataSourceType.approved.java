@@ -4,10 +4,12 @@ import java.util.List;
 
 public enum DataSourceType {
   BIGQUERY,
+  DATABRICKS("host"),
   DB2("host", "port"),
   DBT_CLOUD("host"),
   DBT_ETL,
   JDBC("host", "port"),
+  MARIADB("host", "port"),
   MATILLION_DPC,
   MATILLION_ETL("host", "port"),
   MSFABRIC,
@@ -16,7 +18,8 @@ public enum DataSourceType {
   POSTGRES("host", "port"),
   REDSHIFT("host", "port"),
   SNOWFLAKE("account_id"),
-  SQLSERVER("host", "port");
+  SQLSERVER("host", "port"),
+  TABLEAU("host", "site");
 
   private final List<String> matchingKeys;
 

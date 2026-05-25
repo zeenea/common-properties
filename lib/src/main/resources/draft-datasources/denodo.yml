@@ -1,5 +1,3 @@
-connectorIds:
-  - denodo
 datasource:
   keys:
     - type

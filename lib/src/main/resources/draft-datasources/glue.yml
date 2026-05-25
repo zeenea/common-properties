@@ -1,6 +1,3 @@
-connectorIds:
-  - aws.glue
-  - aws-glue-etl
 datasource:
   keys:
     - type

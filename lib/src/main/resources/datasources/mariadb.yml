@@ -1,14 +1,16 @@
 datasource:
   keys:
     - type
+    - host
+    - port
   values:
-    type: bigquery
+    type: mariadb
 datasets:
-  - name: Dataset
+  - name: Table
     identification:
       keys:
-        - project
-        - dataset
+        - catalog
+        - schema
         - table
     fields:
       - field_key
