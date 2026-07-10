@@ -1,9 +1,9 @@
 package zeenea.common.properties;
 
+import jakarta.annotation.Nullable;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
-import javax.annotation.Nullable;
 import zeenea.common.properties.type.Type;
 
 public final class CommonProperty {
