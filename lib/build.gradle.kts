@@ -19,22 +19,14 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit test framework.
     val junitVersion = "5.14.4"
     testImplementation(platform("org.junit:junit-bom:${junitVersion}"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
-    testImplementation("org.junit.jupiter:junit-jupiter-params")
     testImplementation("org.assertj:assertj-core:3.27.7")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api("org.apache.commons:commons-math3:3.6.1")
-
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation("com.google.guava:guava:32.1.3-jre")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.21.3")
-    implementation("com.jayway.jsonpath:json-path:2.10.0")
+    implementation("jakarta.annotation:jakarta.annotation-api:3.0.0")
 }
 
 tasks.jar {
