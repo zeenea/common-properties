@@ -1,0 +1,15 @@
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: hive
+datasets:
+  - name: Table
+    identification:
+      keys:
+        - schema
+        - table
+    fields:
+      - field_key
