@@ -1,0 +1,10 @@
+datasource:
+  keys:
+    - type
+  values:
+    type: ssis
+dataProcesses:
+  - name: process
+    identification:
+      keys:
+        - id
