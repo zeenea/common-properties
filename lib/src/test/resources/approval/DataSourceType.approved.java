@@ -19,6 +19,7 @@ public enum DataSourceType {
   REDSHIFT("host", "port"),
   SNOWFLAKE("account_id"),
   SQLSERVER("host", "port"),
+  SSIS,
   TABLEAU("host", "site");
 
   private final List<String> matchingKeys;
