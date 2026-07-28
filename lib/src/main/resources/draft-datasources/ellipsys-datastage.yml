@@ -1,0 +1,12 @@
+datasource:
+  keys:
+    - type
+    - duckdb
+  values:
+    type: ellipsys-datastage
+dataProcesses:
+  - name: process
+    identification:
+      keys:
+        - projectid
+        - jobid

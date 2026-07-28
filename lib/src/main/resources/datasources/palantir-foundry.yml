@@ -1,0 +1,15 @@
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: palantir-foundry
+
+datasets:
+  - name: Dataset
+    identification:
+      keys:
+        - rid
+        - prefix
+    fields:
+      - field_key

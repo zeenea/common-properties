@@ -1,7 +1,0 @@
-datasource:
-  keys:
-    - type
-    - host
-    - port
-  values:
-    type: palantir-foundry
