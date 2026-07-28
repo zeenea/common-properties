@@ -10,6 +10,9 @@ datasets:
     identification:
       keys:
         - rid
-        - prefix
     fields:
       - field_key
+    label:
+      keys:
+        - rid
+        - prefix
