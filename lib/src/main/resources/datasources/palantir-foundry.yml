@@ -1,0 +1,22 @@
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: palantir-foundry
+
+datasets:
+  - name: Dataset
+    identification:
+      keys:
+        - rid
+    fields:
+      - field_key
+    label:
+      keys:
+        # either part of the semantic model (ontology) or is technical (raw)
+        # side note for the future:
+        # ontologies could be ontology/customer, ontology/order,
+        # tech could be raw/dataset, raw/pipeline
+        - prefix*
+        - name

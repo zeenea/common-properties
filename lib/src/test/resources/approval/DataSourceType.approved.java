@@ -15,6 +15,7 @@ public enum DataSourceType {
   MSFABRIC,
   MYSQL("host", "port"),
   ORACLE("host", "port"),
+  PALANTIR_FOUNDRY("host"),
   POSTGRES("host", "port"),
   REDSHIFT("host", "port"),
   SNOWFLAKE("account_id"),
