@@ -6,10 +6,26 @@ datasource:
     type: snowflake
 
 datasets:
+  - name: AccountForV1Connector
+    identification:
+      keys:
+        - account_id
+        - catalog
+        - schema
+        - table
+    fields:
+      - field_key
   - name: Table
     identification:
       keys:
         - catalog
+        - schema
+        - table
+    fields:
+      - field_key
+  - name: TableForV1Connector
+    identification:
+      keys:
         - schema
         - table
     fields:

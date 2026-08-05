@@ -22,7 +22,12 @@ public final class DatasetIdentificationKeys {
           Map.entry(DataSourceType.PALANTIR_FOUNDRY, List.of(List.of("rid"))),
           Map.entry(DataSourceType.POSTGRES, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.REDSHIFT, List.of(List.of("catalog", "schema", "table"))),
-          Map.entry(DataSourceType.SNOWFLAKE, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(
+              DataSourceType.SNOWFLAKE,
+              List.of(
+                  List.of("account_id", "catalog", "schema", "table"),
+                  List.of("catalog", "schema", "table"),
+                  List.of("schema", "table"))),
           Map.entry(DataSourceType.SQLSERVER, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.TABLEAU, List.of(List.of("id", "datasource_type"))));
 
