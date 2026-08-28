@@ -38,6 +38,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
           cache-dependency-path: 'ts/yarn.lock'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
