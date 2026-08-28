@@ -51,7 +51,6 @@ jobs:
   publish-zeenea-common-properties-ts:
     needs: build-and-test
     if: ${{ !github.event.release.draft }}
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -83,5 +82,3 @@ jobs:
       - name: Publish
         run: npm publish
         working-directory: ts
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
