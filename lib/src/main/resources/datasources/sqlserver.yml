@@ -14,3 +14,13 @@ datasets:
         - table
     fields:
       - field_key
+dataProcesses:
+  - name: ProcedureLineage
+    identification:
+      keys:
+        - procedure_marker
+        - catalog
+        - schema
+        - procedure
+      values:
+        procedure_marker: stored_proc
