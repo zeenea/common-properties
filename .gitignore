@@ -40,3 +40,8 @@ Thumbs.db
 .claude/
 
 *.received.java
+
+# Typescript
+node_modules/
+ts/dist/
+ts/src/constants.ts

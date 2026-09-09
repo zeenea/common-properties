@@ -16,7 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && tsc -p tsconfig.esm.json",
+    "generate": "node scripts/generate-constants.js",
+    "build": "yarn generate && tsc && tsc -p tsconfig.esm.json",
     "prepublishOnly": "yarn build"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
+    "js-yaml": "^5.4.1",
     "typescript": "~5.3.3"
   }
 }

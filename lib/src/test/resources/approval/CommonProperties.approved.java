@@ -99,12 +99,12 @@ public class CommonProperties {
       Set.of(
           accessUrlProperty,
           catalogCommonProperty,
+          dataSourceTypeProperty,
           databaseCommonProperty,
-          schemaCommonProperty,
-          typeCommonProperty,
-          sqlQueryProperty,
-          sqlQueryDialectProperty,
           expressionProperty,
           powerQueryProperty,
-          dataSourceTypeProperty);
+          schemaCommonProperty,
+          sqlQueryDialectProperty,
+          sqlQueryProperty,
+          typeCommonProperty);
 }

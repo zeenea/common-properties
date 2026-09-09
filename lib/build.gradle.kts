@@ -4,6 +4,7 @@ plugins {
     `maven-publish`
     id("com.diffplug.spotless") version "8.10.0"
     id("zeenea.generate-datasource-type")
+    id("zeenea.generate-common-properties")
 }
 
 group = "zeenea"
