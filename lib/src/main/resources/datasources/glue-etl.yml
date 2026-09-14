@@ -1,0 +1,11 @@
+datasource:
+  keys:
+    - type
+    - region
+  values:
+    type: glue-etl
+dataProcesses:
+  - name: Glue Job
+    identification:
+      keys:
+        - job_name
