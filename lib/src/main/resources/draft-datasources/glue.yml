@@ -1,9 +1,0 @@
-datasource:
-  keys:
-    - type
-    - account
-    - database
-    - location
-    - format
-  values:
-    type: glue
