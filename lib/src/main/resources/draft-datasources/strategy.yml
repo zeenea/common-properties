@@ -1,0 +1,61 @@
+datasource:
+  keys:
+    - type
+    - host
+    - port
+  values:
+    type: strategy
+
+visualizations:
+  - name: Report
+    identification:
+      keys:
+        - project_id
+        - type
+        - id
+      values:
+        type: report
+    label:
+      keys:
+        - project_name
+        - type
+        - path*
+        - name
+      values:
+        type: report
+  - name: Dossier
+    identification:
+      keys:
+        - project_id
+        - type
+        - id
+      values:
+        type: dossier
+    label:
+      keys:
+        - project_name
+        - type
+        - path*
+        - name
+      values:
+        type: dossier
+
+datasets:
+  - name: Dataset
+    identification:
+      keys:
+        - project_id
+        - type
+        - id
+      values:
+        type: dataset
+    label:
+      keys:
+        - project_name
+        - type
+        - path*
+        - name
+      values:
+        type: dataset
+    fields:
+      - field_key
