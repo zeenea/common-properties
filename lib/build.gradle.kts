@@ -41,6 +41,7 @@ spotless {
     java {
         googleJavaFormat()
         toggleOffOn()
+        targetExclude("**/generated/datasource-type/**/*.java")
     }
 }
 
