@@ -24,6 +24,7 @@ public final class DatasetIdentificationKeys {
           Map.entry(DataSourceType.REDSHIFT, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.SNOWFLAKE, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.SQLSERVER, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(DataSourceType.STRATEGY, List.of(List.of("project_id", "type", "id"))),
           Map.entry(DataSourceType.TABLEAU, List.of(List.of("id", "datasource_type"))));
 
   private DatasetIdentificationKeys() {}

@@ -21,6 +21,7 @@ public enum DataSourceType {
   SNOWFLAKE("account_id"),
   SQLSERVER("host", "port"),
   SSIS,
+  STRATEGY("host", "port"),
   TABLEAU("host", "site");
 
   private final List<String> matchingKeys;
