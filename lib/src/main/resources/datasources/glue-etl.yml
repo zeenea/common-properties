@@ -2,6 +2,7 @@ datasource:
   keys:
     - type
     - region
+    - account
   values:
     type: glue-etl
 dataProcesses:
