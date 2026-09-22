@@ -1,0 +1,16 @@
+datasource:
+  keys:
+    - type
+    - region
+    - account
+  values:
+    type: aws-glue-datacatalog
+datasets:
+  - name: Dataset
+    identification:
+      keys:
+        - catalog
+        - database
+        - table
+      fields:
+        - field_key

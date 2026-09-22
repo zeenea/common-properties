@@ -1,0 +1,12 @@
+datasource:
+  keys:
+    - type
+    - region
+    - account
+  values:
+    type: aws-glue-etl
+dataProcesses:
+  - name: Glue Job
+    identification:
+      keys:
+        - job_name
