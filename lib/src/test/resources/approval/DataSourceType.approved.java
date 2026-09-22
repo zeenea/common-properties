@@ -3,13 +3,13 @@ package zeenea.common.properties.datasource;
 import java.util.List;
 
 public enum DataSourceType {
+  AWS_GLUE_DATACATALOG("region", "account"),
+  AWS_GLUE_ETL("region", "account"),
   BIGQUERY,
   DATABRICKS("host"),
   DB2("host", "port"),
   DBT_CLOUD("host"),
   DBT_ETL,
-  GLUE_DATACATALOG("region", "account"),
-  GLUE_ETL("region", "account"),
   JDBC("host", "port"),
   MARIADB("host", "port"),
   MATILLION_DPC,

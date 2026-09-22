@@ -4,7 +4,7 @@ datasource:
     - region
     - account
   values:
-    type: glue-datacatalog
+    type: aws-glue-datacatalog
 datasets:
   - name: Dataset
     identification:
