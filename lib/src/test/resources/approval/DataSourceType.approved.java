@@ -8,6 +8,8 @@ public enum DataSourceType {
   DB2("host", "port"),
   DBT_CLOUD("host"),
   DBT_ETL,
+  GLUE_DATACATALOG("region", "account"),
+  GLUE_ETL("region", "account"),
   JDBC("host", "port"),
   MARIADB("host", "port"),
   MATILLION_DPC,

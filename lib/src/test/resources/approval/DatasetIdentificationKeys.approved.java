@@ -10,6 +10,9 @@ public final class DatasetIdentificationKeys {
           Map.entry(DataSourceType.BIGQUERY, List.of(List.of("project", "dataset", "table"))),
           Map.entry(DataSourceType.DATABRICKS, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.DB2, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(
+              DataSourceType.GLUE_DATACATALOG,
+              List.of(List.of("catalog", "database", "table"))),
           Map.entry(DataSourceType.JDBC, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.MARIADB, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(
