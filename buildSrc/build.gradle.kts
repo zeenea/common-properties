@@ -16,5 +16,9 @@ gradlePlugin {
             id = "zeenea.generate-datasource-type"
             implementationClass = "GenerateDataSourceTypePlugin"
         }
+        create("generateCommonProperties") {
+           id = "zeenea.generate-common-properties"
+           implementationClass = "GenerateCommonPropertiesPlugin"
+        }
     }
 }
