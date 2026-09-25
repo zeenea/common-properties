@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.yaml:snakeyaml:2.6")
+    implementation("org.yaml:snakeyaml:2.7")
 }
 
 gradlePlugin {
