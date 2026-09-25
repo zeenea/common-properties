@@ -1,0 +1,32 @@
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: qlik-sense
+
+datasets:
+  - name: Embedded Dataset
+    identification:
+      keys:
+        - application_id
+        - table_name
+    fields:
+      - field_key
+    label:
+      keys:
+        - application_name
+        - table_name
+
+visualizations:
+  - name: Visualisation Sheet
+    identification:
+      keys:
+        - applicationId
+        - sheetId
+    fields:
+      - field_key
+    label:
+      keys:
+        - application-name
+        - sheet-name
