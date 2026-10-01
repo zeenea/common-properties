@@ -9,17 +9,17 @@ visualizations:
   - name: Visualisation Sheet
     identification:
       keys:
-        - applicationId
-        - sheetId
+        - application_id
+        - sheet_id
     fields:
       - field_key
     label:
       keys:
         - type
-        - application-name
-        - sheet-name
+        - application_name
+        - sheet_name
       values:
-        type: Sheet
+        type: sheet
 
 datasets:
   - name: Application Data Model Table
@@ -35,4 +35,4 @@ datasets:
         - application_name
         - table_name
       values:
-        - type: Application Data Model Table
+        - type: table

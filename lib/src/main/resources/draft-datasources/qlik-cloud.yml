@@ -17,7 +17,7 @@ visualizations:
         - type
         - application_name
       values:
-        - type: Application
+        - type: application
 
 datasets:
   - name: Application Data Model Table
@@ -33,4 +33,4 @@ datasets:
         - application_name
         - table_name
       values:
-        - type: Application Data Model Table
+        - type: table
