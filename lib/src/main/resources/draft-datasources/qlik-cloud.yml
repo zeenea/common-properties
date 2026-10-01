@@ -5,19 +5,6 @@ datasource:
   values:
     type: qlik-cloud
 
-datasets:
-  - name: Embedded Dataset
-    identification:
-      keys:
-        - application_id
-        - table_name
-    fields:
-      - field_key
-    label:
-      keys:
-        - application_name
-        - table_name
-
 visualizations:
   - name: Visualisation Application
     identification:
@@ -27,4 +14,23 @@ visualizations:
       - field_key
     label:
       keys:
+        - type
         - application_name
+      values:
+        - type: Application
+
+datasets:
+  - name: Application Data Model Table
+    identification:
+      keys:
+        - application_id
+        - table_name
+    fields:
+      - field_key
+    label:
+      keys:
+        - type
+        - application_name
+        - table_name
+      values:
+        - type: Application Data Model Table
