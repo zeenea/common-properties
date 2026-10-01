@@ -35,4 +35,4 @@ datasets:
         - application_name
         - table_name
       values:
-        - type: table
+        type: table
