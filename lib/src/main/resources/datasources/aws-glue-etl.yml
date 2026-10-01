@@ -5,6 +5,7 @@ datasource:
     - account
   values:
     type: aws-glue-etl
+
 dataProcesses:
   - name: Glue Job
     identification:

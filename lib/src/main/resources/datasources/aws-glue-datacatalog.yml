@@ -5,6 +5,7 @@ datasource:
     - account
   values:
     type: aws-glue-datacatalog
+
 datasets:
   - name: Dataset
     identification:
@@ -12,5 +13,5 @@ datasets:
         - catalog
         - database
         - table
-      fields:
-        - field_key
+    fields:
+      - field_key
