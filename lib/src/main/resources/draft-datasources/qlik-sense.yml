@@ -1,0 +1,38 @@
+datasource:
+  keys:
+    - type
+    - host
+  values:
+    type: qlik-sense
+
+visualizations:
+  - name: Visualisation Sheet
+    identification:
+      keys:
+        - application_id
+        - sheet_id
+    fields:
+      - field_key
+    label:
+      keys:
+        - type
+        - application_name
+        - sheet_name
+      values:
+        type: sheet
+
+datasets:
+  - name: Application Data Model Table
+    identification:
+      keys:
+        - application_id
+        - table_name
+    fields:
+      - field_key
+    label:
+      keys:
+        - type
+        - application_name
+        - table_name
+      values:
+        - type: table
