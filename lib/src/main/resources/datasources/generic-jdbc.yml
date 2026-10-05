@@ -1,14 +1,14 @@
 datasource:
   keys:
     - type
-    - host
-    - port
+    - host?
+    - port?
 datasets:
   - name: Table
     identification:
       keys:
         - catalog
-        - schema
+        - schema?
         - table
     fields:
       - field_key
