@@ -1,0 +1,99 @@
+datasource:
+  keys:
+    - type
+    - region
+    - account
+  values:
+    type: aws-quicksight
+
+datasets:
+  - name: Data Source
+    identification:
+      keys:
+        - type
+        - arn
+      values:
+        type: datasource
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Data source
+
+  - name: Physical Table
+    identification:
+      keys:
+        - type
+        - arn
+        - table
+      values:
+        type: physical
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Dataset physical table
+    fields:
+      - field_key
+
+  - name: Output Columns
+    identification:
+      keys:
+        - type
+        - arn
+      values:
+        type: output
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Dataset output columns
+    fields:
+      - field_key
+
+  - name: Analysis
+    identification:
+      keys:
+        - type
+        - arn
+      values:
+        type: analysis
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Analysis
+
+dataProcesses:
+  - name: Dataset Processing
+    identification:
+      keys:
+        - type
+        - arn
+      values:
+        type: processing
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Dataset processing
+
+visualizations:
+  - name: Dashboard
+    identification:
+      keys:
+        - type
+        - arn
+      values:
+        type: dashboard
+    label:
+      keys:
+        - label
+        - name
+      values:
+        label: Dashboard
