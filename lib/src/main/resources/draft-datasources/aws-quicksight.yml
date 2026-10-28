@@ -28,7 +28,7 @@ datasets:
         - arn
         - table
       values:
-        type: physical
+        type: physical-table
     label:
       keys:
         - label
@@ -44,7 +44,7 @@ datasets:
         - type
         - arn
       values:
-        type: output
+        type: output-columns
     label:
       keys:
         - label
