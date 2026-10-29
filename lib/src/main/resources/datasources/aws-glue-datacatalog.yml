@@ -11,7 +11,7 @@ datasets:
     identification:
       keys:
         - catalog
-        - database
+        - schema
         - table
     fields:
       - field_key
