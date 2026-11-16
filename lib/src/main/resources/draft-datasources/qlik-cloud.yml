@@ -6,31 +6,41 @@ datasource:
     type: qlik-cloud
 
 visualizations:
-  - name: Visualisation Application
+  - name: Application
     identification:
       keys:
+        - space_id
         - application_id
     fields:
       - field_key
     label:
       keys:
-        - type
+        - space_name
         - application_name
-      values:
-        type: application
 
 datasets:
-  - name: Application Data Model Table
+  - name: Table
     identification:
       keys:
+        - space_id
         - application_id
         - table_name
     fields:
       - field_key
     label:
       keys:
-        - type
+        - space_name
         - application_name
         - table_name
-      values:
-        type: table
+
+  # A QVD file, identified by its lineage QRI (qri:qdf:<space|user>://<hash>#<file id>).
+  - name: QvdFile
+    identification:
+      keys:
+        - data_file_qri
+    fields:
+      - field_key
+    label:
+      keys:
+        - space_name
+        - file_name
