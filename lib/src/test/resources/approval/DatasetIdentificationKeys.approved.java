@@ -13,6 +13,8 @@ public final class DatasetIdentificationKeys {
           Map.entry(DataSourceType.BIGQUERY, List.of(List.of("project", "dataset", "table"))),
           Map.entry(DataSourceType.DATABRICKS, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.DB2, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(DataSourceType.INFORMIX, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(DataSourceType.INGRES, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.MARIADB, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(
               DataSourceType.MSFABRIC,
@@ -22,12 +24,13 @@ public final class DatasetIdentificationKeys {
           Map.entry(DataSourceType.MYSQL, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.ORACLE, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.PALANTIR_FOUNDRY, List.of(List.of("rid"))),
-          Map.entry(DataSourceType.POSTGRES, List.of(List.of("catalog", "schema", "table"))),
+          Map.entry(DataSourceType.POSTGRESQL, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.REDSHIFT, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.SNOWFLAKE, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.SQLSERVER, List.of(List.of("catalog", "schema", "table"))),
           Map.entry(DataSourceType.STRATEGY, List.of(List.of("project_id", "type", "id"))),
-          Map.entry(DataSourceType.TABLEAU, List.of(List.of("id", "datasource_type"))));
+          Map.entry(DataSourceType.TABLEAU, List.of(List.of("id", "datasource_type"))),
+          Map.entry(DataSourceType.ZEN, List.of(List.of("catalog", "schema", "table"))));
 
   private DatasetIdentificationKeys() {}
 }

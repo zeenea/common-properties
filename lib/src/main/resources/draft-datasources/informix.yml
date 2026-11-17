@@ -1,8 +1,0 @@
-datasource:
-  keys:
-    - type
-    - host
-    - port
-    - database
-  values:
-    type: informix
