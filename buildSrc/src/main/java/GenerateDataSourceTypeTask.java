@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.tasks.CacheableTask;
@@ -104,7 +105,7 @@ public abstract class GenerateDataSourceTypeTask extends DefaultTask {
 
       List<List<String>> datasetIdentificationKeys = parseDatasetIdentificationKeys(doc);
 
-      return Optional.of(new Datasource(toUpperSnakeCase(type), datasourceKeys, datasetIdentificationKeys));
+      return Optional.of(new Datasource(toUpperSnakeCase(type), type, datasourceKeys, datasetIdentificationKeys));
     } catch (IOException e) {
       return Optional.empty();
     }
@@ -143,18 +144,23 @@ public abstract class GenerateDataSourceTypeTask extends DefaultTask {
     for (int i = 0; i < datasources.size(); i++) {
       Datasource d = datasources.get(i);
       sb.append("  ").append(d.enumName);
-      if (!d.datasourceKeys.isEmpty()) {
-        String keysStr =
-            d.datasourceKeys.stream().map(k -> "\"" + k + "\"").collect(Collectors.joining(", "));
-        sb.append("(").append(keysStr).append(")");
-      }
+      String args =
+          Stream.concat(Stream.of(d.type), d.datasourceKeys.stream())
+              .map(k -> "\"" + k + "\"")
+              .collect(Collectors.joining(", "));
+      sb.append("(").append(args).append(")");
       sb.append(i < datasources.size() - 1 ? "," : ";").append("\n");
     }
 
     sb.append("\n");
+    sb.append("  private final String typeValue;\n");
     sb.append("  private final List<String> matchingKeys;\n\n");
-    sb.append("  DataSourceType(String... matchingKeys) {\n");
+    sb.append("  DataSourceType(String typeValue, String... matchingKeys) {\n");
+    sb.append("    this.typeValue = typeValue;\n");
     sb.append("    this.matchingKeys = List.of(matchingKeys);\n");
+    sb.append("  }\n\n");
+    sb.append("  public String getTypeValue() {\n");
+    sb.append("    return typeValue;\n");
     sb.append("  }\n\n");
     sb.append("  public List<String> getMatchingKeys() {\n");
     sb.append("    return matchingKeys;\n");
@@ -233,11 +239,17 @@ public abstract class GenerateDataSourceTypeTask extends DefaultTask {
 
   private static class Datasource {
     final String enumName;
+    final String type;
     final List<String> datasourceKeys;
     final List<List<String>> datasetIdentificationKeys;
 
-    Datasource(String enumName, List<String> datasourceKeys, List<List<String>> datasetIdentificationKeys) {
+    Datasource(
+        String enumName,
+        String type,
+        List<String> datasourceKeys,
+        List<List<String>> datasetIdentificationKeys) {
       this.enumName = enumName;
+      this.type = type;
       this.datasourceKeys = datasourceKeys;
       this.datasetIdentificationKeys = datasetIdentificationKeys;
     }
