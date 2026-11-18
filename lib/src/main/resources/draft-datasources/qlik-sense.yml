@@ -6,7 +6,7 @@ datasource:
     type: qlik-sense
 
 visualizations:
-  - name: Visualisation Sheet
+  - name: Sheet
     identification:
       keys:
         - application_id
@@ -22,7 +22,7 @@ visualizations:
         type: sheet
 
 datasets:
-  - name: Application Data Model Table
+  - name: Table
     identification:
       keys:
         - application_id
