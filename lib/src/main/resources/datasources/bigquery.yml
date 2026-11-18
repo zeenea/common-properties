@@ -11,4 +11,4 @@ datasets:
         - dataset
         - table
     fields:
-      - field_key
+      - field_key*
