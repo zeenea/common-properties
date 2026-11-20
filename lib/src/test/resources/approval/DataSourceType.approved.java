@@ -10,6 +10,8 @@ public enum DataSourceType {
   DB2("host", "port"),
   DBT_CLOUD("host"),
   DBT_ETL,
+  INFORMIX("host", "port"),
+  INGRES("host", "port"),
   MARIADB("host", "port"),
   MATILLION_DPC,
   MATILLION_ETL("host", "port"),
@@ -17,13 +19,14 @@ public enum DataSourceType {
   MYSQL("host", "port"),
   ORACLE("host", "port"),
   PALANTIR_FOUNDRY("host"),
-  POSTGRES("host", "port"),
+  POSTGRESQL("host", "port"),
   REDSHIFT("host", "port"),
   SNOWFLAKE("account_id"),
   SQLSERVER("host", "port"),
   SSIS,
   STRATEGY("host", "port"),
-  TABLEAU("host", "site");
+  TABLEAU("host", "site"),
+  ZEN("host", "port");
 
   private final List<String> matchingKeys;
 

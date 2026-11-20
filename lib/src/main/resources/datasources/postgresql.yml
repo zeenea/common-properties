@@ -4,7 +4,7 @@ datasource:
     - host
     - port
   values:
-    type: postgres
+    type: postgresql
 datasets:
   - name: Table
     identification:
