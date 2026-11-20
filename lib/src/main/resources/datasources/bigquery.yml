@@ -11,4 +11,5 @@ datasets:
         - dataset
         - table
     fields:
+      # one value per nesting level for RECORD subfields (address.geo.lat -> address, geo, lat)
       - field_key*
