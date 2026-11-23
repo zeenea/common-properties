@@ -10,37 +10,55 @@ visualizations:
     identification:
       keys:
         - space_id
+        - type
         - application_id
+      values:
+        type: application
     fields:
       - field_key
     label:
       keys:
         - space_name
+        - type
         - application_name
+      values:
+        type: application
 
 datasets:
   - name: Table
     identification:
       keys:
         - space_id
+        - type
         - application_id
         - table_name
+      values:
+        type: table
     fields:
       - field_key
     label:
       keys:
         - space_name
+        - type
         - application_name
         - table_name
+      values:
+        type: table
 
   # A QVD file, identified by its lineage QRI (qri:qdf:<space|user>://<hash>#<file id>).
   - name: QvdFile
     identification:
       keys:
+        - type
         - data_file_qri
+      values:
+        type: qvd
     fields:
       - field_key
     label:
       keys:
         - space_name
+        - type
         - file_name
+      values:
+        type: qvd
