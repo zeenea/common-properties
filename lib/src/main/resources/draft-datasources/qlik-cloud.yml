@@ -5,11 +5,14 @@ datasource:
   values:
     type: qlik-cloud
 
+# The space holding an application is in the labels only: Qlik identifies an application by its id
+# alone (qri:app:sense://<appId>), which it keeps when the application moves to another space.
+
 visualizations:
+  # A sheet, identified within its application by its engine object id (qInfo.qId).
   - name: Sheet
     identification:
       keys:
-        - space_id
         - application_id
         - sheet_id
     fields:
@@ -27,7 +30,6 @@ datasets:
   - name: Table
     identification:
       keys:
-        - space_id
         - application_id
         - table_name
     fields:
