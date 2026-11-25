@@ -6,41 +6,37 @@ datasource:
     type: qlik-cloud
 
 visualizations:
-  - name: Application
+  - name: Sheet
     identification:
       keys:
         - space_id
-        - type
         - application_id
-      values:
-        type: application
+        - sheet_id
     fields:
       - field_key
     label:
       keys:
         - space_name
-        - type
         - application_name
+        - type
+        - sheet_name
       values:
-        type: application
+        type: sheet
 
 datasets:
   - name: Table
     identification:
       keys:
         - space_id
-        - type
         - application_id
         - table_name
-      values:
-        type: table
     fields:
       - field_key
     label:
       keys:
         - space_name
-        - type
         - application_name
+        - type
         - table_name
       values:
         type: table
@@ -49,10 +45,7 @@ datasets:
   - name: QvdFile
     identification:
       keys:
-        - type
         - data_file_qri
-      values:
-        type: qvd
     fields:
       - field_key
     label:
